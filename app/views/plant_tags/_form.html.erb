@@ -1,0 +1,4 @@
+<%= simple_form_for [@plant, @plant_tag] do |f| %>
+  <%= f.input :tag, collection: Tag.all, input_html: { multiple: true, data: {controller: "tag"}}, include_blank: false %>
+  <%= f.submit "Add Tag", class: "btn btn-success" %>
+<% end %>
